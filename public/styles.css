@@ -1,0 +1,212 @@
+/* Ensure html and body take full height and remove default margins */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General */
+body {
+  font-family: "Minecraft", monospace;
+  color: #e0e0e0;
+
+  /* Background image */
+  background-image: url('https://www.powerupstack.com/assets/minecraft_wallpaper-BDxiBRY_.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-size 0.8s ease, background-position 0.8s ease; /* smooth zoom transition */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Background zoom effect */
+body.zoomed {
+  background-size: 130%;
+  background-position: center top;
+}
+
+/* Version label */
+.version-label {
+  font-size: 0.6em;
+  vertical-align: super;
+  color: #aaa;
+}
+
+/* Topbar */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 0 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px #000;
+}
+
+.topbar button {
+  border-radius: 25%/50%;
+  padding: 6px 14px;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(145deg, #4caf50, #43a047);
+  color: #fff;
+  border: none;
+  transition: all 0.2s;
+}
+
+.topbar button:hover {
+  background: linear-gradient(145deg, #45a049, #388e3c);
+  transform: scale(1.08);
+}
+
+/* Main container */
+.container {
+  max-width: 1000px;
+  margin: 100px auto 20px auto; /* avoid topbar overlap */
+  padding: 30px;
+  background: rgba(43, 43, 43, 0.85);
+  border-radius: 16px;
+  box-shadow: 0 0 30px #000000cc;
+}
+
+/* Sections */
+.section {
+  display: none;
+}
+.section.active {
+  display: block;
+}
+
+/* Buttons (squircle style) */
+button {
+  border-radius: 25%/50%;
+  padding: 12px 22px;
+  margin: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+  background: linear-gradient(145deg, #4caf50, #388e3c);
+  color: #fff;
+  border: none;
+  box-shadow: 3px 3px 6px #00000055, inset -2px -2px 4px #2e7d32;
+  transition: all 0.2s;
+}
+button:hover {
+  background: linear-gradient(145deg, #45a049, #2e7d32);
+  transform: scale(1.08);
+}
+
+/* Inputs (login, chat, user creation) */
+input, select {
+  width: 100%;
+  min-height: 45px;
+  padding: 12px 16px;
+  margin: 8px 0;
+  border-radius: 12px;
+  border: 1px solid #555;
+  background: #333;
+  color: #fff;
+  font-size: 1.05em;
+  box-sizing: border-box;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+input:focus, select:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 6px #4caf5077;
+  outline: none;
+}
+
+/* Chat input */
+#panel-main div[style*="display:flex"] input#chat-msg {
+  flex: 1;
+  min-height: 45px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #555;
+  background: #333;
+  color: #fff;
+  font-size: 1.1em;
+  box-sizing: border-box;
+}
+
+/* Bot console */
+#bot-console {
+  background: rgba(0, 0, 0, 0.85);
+  color: #0f0;
+  height: 250px;
+  width: 800px;
+  overflow-y: auto;
+  padding: 14px;
+  border-radius: 16px;
+  font-family: monospace;
+  margin-top: 10px;
+  box-shadow: inset 0 0 15px #000;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px #00000055;
+}
+th, td {
+  border: 1px solid #555;
+  padding: 10px;
+  text-align: left;
+  vertical-align: middle;
+}
+th {
+  background: #222;
+  font-weight: bold;
+}
+tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Permission checkboxes */
+#permission-checkboxes label,
+#users-table label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 4px 8px;
+  margin: 2px;
+  font-size: 0.95em;
+  box-shadow: inset 0 0 3px #000;
+}
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #4caf50;
+  transform: scale(0.9);
+}
+
+/* Scrollbar styling for console and table */
+#bot-console::-webkit-scrollbar,
+table::-webkit-scrollbar {
+  width: 8px;
+}
+#bot-console::-webkit-scrollbar-thumb,
+table::-webkit-scrollbar-thumb {
+  background: #4caf50;
+  border-radius: 4px;
+}
+#bot-console::-webkit-scrollbar-track,
+table::-webkit-scrollbar-track {
+  background: #111;
+}

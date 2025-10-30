@@ -1,0 +1,12 @@
+{
+  "Admin": {
+    "password": "Administrator",
+    "role": "admin",
+    "permissions": [
+      "view_console",
+      "send_message",
+      "start_stop",
+      "manage_users"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "minecraft": {
+    "host": "Server address here!",
+    "port": 25565,
+    "version": "1.21.1",
+    "auth": "offline"
+  },
+  "bot": {
+    "username": "KeepAliveBot",
+    "password": "Keepmeup"
+  },
+  "server": {
+    "port": 3000
+  }
+}
