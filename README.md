@@ -16,4 +16,4 @@ Just press the stop button... simple.
 
 That's all, good luck with your server!
 
-# Disclaimer, CraftersSpot Studios is not responsible for any misconfigurations you may have made, we are not responsible for any server destruction if you gave the bot account operator commands, if you did, you should have been more careful.
+## *Disclaimer, CraftersSpot Studios is not responsible for any misconfigurations you may have made, we are not responsible for any server destruction if you gave the bot account operator commands, if you did, you should have been more careful.*
