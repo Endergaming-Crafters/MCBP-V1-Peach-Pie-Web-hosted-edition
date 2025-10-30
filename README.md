@@ -1,6 +1,10 @@
 # MCBP-V1-Peach-Pie-Web-hosted-edition
 MCBP is a Minecraft bot panel capable of keeping your server running 24/7, it runs on MineFlayer for NodeJS and is easy to set up.
 
+Dependencies install command "npm install"
+
+Start panel command "node server.js"
+
 Info and Set-up
 This is a special version sepcifilatty made for webhosting, we highly recommend that you use a web hosting service that supports NodeJS and runs 24/7, we recommend "https://koyeb.com" for first timers, we also recommend that you set the server address in config.json and also create your users in users.json, there are two files, one in the main folder and one in the data folder, please add the users to both files, the username, password and game version are also configurable but we recommend that you keep it as it is and if your server runs PaperMC, please ensure that your server has ViaVersion and ViaBackwards installed, otherwise the bot may not work.
 
